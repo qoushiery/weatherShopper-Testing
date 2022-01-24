@@ -4,6 +4,8 @@
     <test name="testCase">
         <classes>
             <class name="com.weatherShopper.test.tests.TestWeatherShopperEndToEnd"/>
+            <class name="com.weatherShopper.test.tests.TestBuyingLeastMoisturizerWhileTempBelow19"/>
+            <class name="com.weatherShopper.test.tests.TestBuyingLeastSunscreensWhileTempAbove34"/>
         </classes>
     </test>
 </suite>
