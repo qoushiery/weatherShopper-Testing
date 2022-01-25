@@ -19,16 +19,7 @@ import java.util.List;
 public class ElementActions {
     //Create the wait element
     public static Wait<WebDriver> wait = new WebDriverWait(DriverHandler.getInstance().getDriver(), Duration.ofSeconds(Long.parseLong(ConfigUtil.WAIT_TIME)));
-
-    //Check the presence of a certain locator in the DOM
-    public static void checkPresenceOf(By locator){
-        try {
-            wait.until(ExpectedConditions.presenceOfElementLocated(locator));
-        }
-        catch (Exception e){
-            System.out.println("Element"+locator.toString()+"is not present on the current DOM.");
-        }
-    }
+    
 
     //Check the visibility of a web element by its locator
      static boolean checkVisibilityOf(By locator){
