@@ -96,13 +96,11 @@ public class TestBuyingLeastMoisturizerWhileTempBelow19 extends BaseTest {
         //Fill the Email
         checkoutPage.enterEmail(ConfigUtil.EMAIL);
 
-        //fill the card Number
-        checkoutPage.enterCardNumber(ConfigUtil.CARD_NUMBER);
-
         //Fill the Expiry Date
         checkoutPage.enterCardExpirationDate(ConfigUtil.EXPIRY_DATE);
-        //this is a workaround
-        checkoutPage.enterCardExpirationDate("24");
+
+        //fill the card Number
+        checkoutPage.enterCardNumber(ConfigUtil.CARD_NUMBER);
 
         //Fill the CVC
         checkoutPage.enterCvcNumber(ConfigUtil.CVC_NUMBER);

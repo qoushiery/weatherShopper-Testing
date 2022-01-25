@@ -110,14 +110,15 @@ public class ElementActions {
         }
         return element.isDisplayed();
     }
-
-    public static void clearTextField(By locator) {
-        try {
-            WebElement element = checkClickAbilityOf(locator);
-            element.clear();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+    public static void forceClickOnElementByLocator(By locator) {
+        checkClickAbilityOf(locator);
+        WebElement element = DriverHandler.getInstance().getDriver().findElement(locator);
+        ((JavascriptExecutor) DriverHandler.getInstance().getDriver()).executeScript("arguments[0].click()", element);
     }
+    public static void pressKeyOnElement(By locator, Keys keys)
+    {
+        ElementActions.retrieveElement(locator).sendKeys(keys);
+    }
+
+
 }
