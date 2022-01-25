@@ -1,10 +1,11 @@
-# weatherShopper-Testing
+# WeatherShopper-Testing
 - this framework is build using Page Object Model (POM) consists of 5 pages.
 - the Five pages are (Homepage, Moisturizer Page, Sunscreens Page, Checkout page and the Payment successful page).
  there are 3 test cases exists on the Frame work
     - First Test Case "TestWeatherShopperEndToEnd" choose the least Moisturizer or Sunscreens based on the Displayed Temperature once the homepage is opened.
     - Second Test Case "TestBuyingLeastMoisturizerWhileTempBelow19" will refresh the page till the required temperature to buy Moisturizer (below 19 degrees) is displayed.
     - Third Test Case "TestBuyingLeastSunscreensWhileTempAbove34" will refresh the page till the required temperature to buy Sunscreens (Above 34 degrees) is displayed.
+ - Their is an Excel File Contains a written Manual Test Cases with a detailed test steps test data and Expected result of each test step.
 ------------------------------------------------
 # Framework classes and their functionality
 **ElementActions Class**
