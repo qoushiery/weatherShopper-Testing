@@ -18,15 +18,6 @@ public class BrowserActions {
         DriverHandler.getInstance().getDriver().navigate().to(url);
     }
 
-    //Get the current URL
-    public static String getCurrentUrl(){
-        return DriverHandler.getInstance().getDriver().getCurrentUrl();
-    }
-
-    //Get the Window Title
-    public static String getWindowTitle(){
-        return DriverHandler.getInstance().getDriver().getTitle();
-    }
     //Maximizing the Browser Window
     public static void maximizeWindow(){
         DriverHandler.getInstance().getDriver().manage().window().maximize();
@@ -56,26 +47,6 @@ public class BrowserActions {
         }
         else {
             //Do Nothing!
-        }
-    }
-    //check if the Alert is displayed
-    public static boolean checkIfAlertIsPresent(){
-        try {
-            DriverHandler.getInstance().getDriver().switchTo().alert();
-            return true;
-        }
-        catch (NoAlertPresentException e){
-            return false;
-        }
-    }
-
-    //Approving an Alert
-    public static void approveAlert(){
-        try {
-            DriverHandler.getInstance().getDriver().switchTo().alert().accept();
-        }
-        catch (NoAlertPresentException e){
-            e.printStackTrace();
         }
     }
 
