@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="testSuite" thread-count="1" verbose="1">
-    <test name="testCase">
+    <test name="RegressionSuite">
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="com.weatherShopper.test.tests.TestBuyingLeastMoisturizerWhileTempBelow19"/>
             <class name="com.weatherShopper.test.tests.TestBuyingLeastSunscreensWhileTempAbove34"/>
