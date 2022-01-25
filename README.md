@@ -31,7 +31,7 @@ Just call the BrowerActions class in your test and use their methods
 **ConfigUtil**
 - This class is used to read our config file "Config.properties"
 --------------------------------------------------
-# Test Clases
+# Test Classes and their functionality
 **Locators Package**
 - This package is considered as a repository of static locators that we have in the system to be used to create any method needed for building our test case
 the locators are divided into a separate classes based on their page location
