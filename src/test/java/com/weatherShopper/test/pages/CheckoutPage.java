@@ -80,34 +80,34 @@ public class CheckoutPage {
 
             switch (Integer.parseInt(String.valueOf(ch))) {
                 case 0:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD0);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD0);
                     break;
                 case 1:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD1);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD1);
                     break;
                 case 2:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD2);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD2);
                     break;
                 case 3:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD3);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD3);
                     break;
                 case 4:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD4);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD4);
                     break;
                 case 5:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD5);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD5);
                     break;
                 case 6:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD6);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD6);
                     break;
                 case 7:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD7);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD7);
                     break;
                 case 8:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD8);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD8);
                     break;
                 case 9:
-                    DriverHandler.getInstance().getDriver().findElement(CheckoutPageLocators.CARD_NUMBER_FIELD).sendKeys(Keys.NUMPAD9);
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.CARD_NUMBER_FIELD,Keys.NUMPAD9);
                     break;
             }
 
@@ -117,8 +117,46 @@ public class CheckoutPage {
     //Fill the card expiration date
     public void enterCardExpirationDate(String expiryDate){
         ElementActions.isElementDisplayed(CheckoutPageLocators.EXPIRATION_DATE_FIELD);
-        ElementActions.typeInTextField(CheckoutPageLocators.EXPIRATION_DATE_FIELD,expiryDate);
+        ElementActions.forceClickOnElementByLocator(CheckoutPageLocators.EXPIRATION_DATE_FIELD);
+
+        for (char ch : expiryDate.toCharArray()) {
+
+            switch (Integer.parseInt(String.valueOf(ch))) {
+                case 0:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD0);
+                    break;
+                case 1:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD1);
+                    break;
+                case 2:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD2);
+                    break;
+                case 3:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD3);
+                    break;
+                case 4:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD4);
+                    break;
+                case 5:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD5);
+                    break;
+                case 6:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD6);
+                    break;
+                case 7:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD7);
+                    break;
+                case 8:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD8);
+                    break;
+                case 9:
+                    ElementActions.pressKeyOnElement(CheckoutPageLocators.EXPIRATION_DATE_FIELD, Keys.NUMPAD9);
+                    break;
+            }
+        }
+
     }
+
 
     //Fill the CVC number
     public void enterCvcNumber(String cvc){

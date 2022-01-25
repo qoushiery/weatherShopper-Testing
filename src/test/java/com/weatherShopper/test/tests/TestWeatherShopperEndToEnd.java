@@ -91,17 +91,14 @@ public class TestWeatherShopperEndToEnd extends BaseTest {
             //Fill the Email
             checkoutPage.enterEmail(ConfigUtil.EMAIL);
 
+            //Fill the Expiry Date
+            checkoutPage.enterCardExpirationDate(ConfigUtil.EXPIRY_DATE);
+
             //fill the card Number
             checkoutPage.enterCardNumber(ConfigUtil.CARD_NUMBER);
 
-
             //Fill the CVC
             checkoutPage.enterCvcNumber(ConfigUtil.CVC_NUMBER);
-
-            //Fill the Expiry Date
-            checkoutPage.enterCardExpirationDate(ConfigUtil.EXPIRY_DATE);
-            //This A workaround
-            checkoutPage.enterCardExpirationDate("24");
 
             //Fill the Zip Code
             checkoutPage.enterZipCode(ConfigUtil.ZIP_CODE);
@@ -174,16 +171,14 @@ public class TestWeatherShopperEndToEnd extends BaseTest {
             //Fill the Email
             checkoutPage.enterEmail(ConfigUtil.EMAIL);
 
+            //Fill the Expiry Date
+            checkoutPage.enterCardExpirationDate(ConfigUtil.EXPIRY_DATE);
+
             //fill the card Number
             checkoutPage.enterCardNumber(ConfigUtil.CARD_NUMBER);
 
             //Fill the CVC
             checkoutPage.enterCvcNumber(ConfigUtil.CVC_NUMBER);
-
-            //Fill the Expiry Date
-            checkoutPage.enterCardExpirationDate(ConfigUtil.EXPIRY_DATE);
-            //this is a workaround
-            checkoutPage.enterCardExpirationDate("24");
 
             //Fill the Zip Code
             checkoutPage.enterZipCode(ConfigUtil.ZIP_CODE);
