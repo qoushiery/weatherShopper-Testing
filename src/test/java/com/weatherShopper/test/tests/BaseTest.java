@@ -14,8 +14,8 @@ public class BaseTest {
 
     @BeforeTest
     @Parameters("browser")
-    public void initializeBrowsers(){
-        switch (ConfigUtil.BROWSER1.toLowerCase()) {
+    public void initializeBrowsers(String browser){
+        switch (browser.toLowerCase()) {
             case "chrome":
                 DriverHandler.getInstance().setBrowserType(BrowserType.CHROME);
                 break;
@@ -26,17 +26,6 @@ public class BaseTest {
                 DriverHandler.getInstance().setBrowserType(BrowserType.FIREFOX);
                 break;
         }
-  /*      switch (ConfigUtil.BROWSER2.toLowerCase()) {
-            case "chrome":
-                DriverHandler.getInstance().setBrowserType(BrowserType.CHROME);
-                break;
-            case "edge":
-                DriverHandler.getInstance().setBrowserType(BrowserType.EDGE);
-                break;
-            case "firefox":
-                DriverHandler.getInstance().setBrowserType(BrowserType.FIREFOX);
-                break;
-        }*/
     }
     @BeforeClass
     public void restoreWindowSize(){

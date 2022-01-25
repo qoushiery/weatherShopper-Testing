@@ -6,8 +6,6 @@ import com.weatherShopper.framework.utilities.readers.DataReader;
 import com.weatherShopper.framework.utilities.readers.PropertiesReader;
 
 public class ConfigUtil {
-    public static String BROWSER1;
-    public static String BROWSER2;
     public static String BASE_URL;
     public static String EMAIL;
     public static String CARD_NUMBER;
@@ -19,8 +17,7 @@ public class ConfigUtil {
 
     public static void loadTestDataFromConfigFile(){
         DataReader reader = new PropertiesReader(Paths.TEST_RESOURCES+"config.properties");
-        BROWSER1 = reader.readValueUsingKey("Browser1");
-        BROWSER2 = reader.readValueUsingKey("Browser2");
+
         BASE_URL = reader.readValueUsingKey("Base_URL");
         EMAIL = reader.readValueUsingKey("Email");
         CARD_NUMBER = reader.readValueUsingKey("Card_Number");
